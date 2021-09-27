@@ -1,14 +1,33 @@
 <html>
-<Body>
+<Body style="width:100%">
   <h1>QCVMS session calculator</h1>
-  Total appts required: 
-  </br>
-  Slot duration (mins):
-  </br>
-  Parallel slots:
-  </br>
-Total session duration (hours):
-  </br>
-<button>Calculate</button>
+ Total vaccinations required: <input type="text" id="VaxTotal" />
+	<br />
+	
+	Total session hours: <input type="text" id="TotalHours" />
+	<br />
+	
+	Timeslot duration (mins): <input type="text" id="TimeslotDuration" />
+	<br />
+	
+	Total vaccinators required: <input type="text" id="TotalVaccinators" />
+	<br />
+	
+	<button id="calculate">Calculate</button>
+  
+  <script type="text/javascript">
+    document.getElementById('calculate').addEventListener('click', function(){ 
+
+	var vaxTotal = document.getElementById('VaxTotal').value;
+	var hours = document.getElementById('TotalHours').value;
+	var duration = document.getElementById('TimeslotDuration').value;
+	var vaccinators = document.getElementById('TotalVaccinators').value;
+	
+	var vaxReqd = ((vaxTotal / hours) / (60 / duration));
+	document.getElementById('TotalVaccinators').value = vaxReqd;
+	
+
+});
+  </script>
 </Body>
 </Html>
