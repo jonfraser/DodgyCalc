@@ -1,20 +1,20 @@
+<!doctype html>
 <html>
-<Body style="width:100%">
-  <h1>QCVMS session calculator</h1>
- Total vaccinations required: <input type="text" id="VaxTotal" />
-	<br />
-	
-	Total session hours: <input type="text" id="TotalHours" />
-	<br />
-	
-	Timeslot duration (mins): <input type="text" id="TimeslotDuration" />
-	<br />
-	
-	Total vaccinators required: <input type="text" id="TotalVaccinators" />
-	<br />
-	
-	<button id="calculate">Calculate</button>
-  
+    <head>
+        <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+<Body>
+  <h1 class="font-black">QCVMS session calculator</h1>
+  <div class="flex flex-col ...">
+    <div>Total vaccinations required: <input type="text" id="VaxTotal" class="border border-indigo-600 ..." /></div>
+    <div>Total session hours: <input type="text" id="TotalHours" class="border border-indigo-600 ..." /></div>
+    <div>Timeslot duration (mins): <input type="text" id="TimeslotDuration" class="border border-indigo-600 ..." /></div>
+    <div>Total vaccinators required: <input type="text" id="TotalVaccinators" class="border border-indigo-600 ..." /></div>
+    <div><button id="calculate" class="border border-indigo-600 ...">Calculate</button></div>
+  </div>
+ 
   <script type="text/javascript">
     document.getElementById('calculate').addEventListener('click', function(){ 
 
